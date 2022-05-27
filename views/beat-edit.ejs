@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beat</title>
+</head>
+<body class="bg-1 d-flex flex-column min-vh-100" style="margin: 0px auto">
+
+<div class="container-fluid">
+    <form action="/beats/<%=data.id%>?_method=PATCH" method="post">
+    <div class="d-flex justify-content-center row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div>
+            <div class="card bg-dark align-items-center rounded pb-3 border border-light">
+                <div class="form-floating form-group mb-3 text-light mt-3">
+                    <input type="text" name="title" class="form-control bg-transparent text-light" id="title" placeholder="Title" value="<%= data.title %>" required>
+                    <label for="title"><i class="fa-solid fa-clapperboard"></i> Title</label>
+                </div>
+
+                <div class="text-center">
+                    <div class="form-floating form-group text-light mb-3">
+                        <input type="text" name="genre" class="form-control bg-transparent text-light" id="genre" placeholder="Genre" value="<%= data.author %>" required>
+                        <label for="genre"><i class="fa-solid fa-tag"></i> Author</label>
+                    </div>
+                </div>
+                <div class="text-start w-75">
+                    <p class="text-secondary">
+                        <div class="form-floating form-group text-light mb-3">
+                            <input type="text" name="music" class="form-control bg-transparent text-light" id="year" value="<%= data.music %>" placeholder="Link" required>
+                            <label for="title"><i class="fa-solid fa-calendar-days"></i> Link</label>
+                        </div>
+                    </p>
+                    
+                </div>
+
+            </div>
+            <div class="card bg-dark rounded align-items-center pb-3 mt-3 pt-3 border border-gray">
+                    <span>
+                        <button class="btn btn-warning" type="submit">
+                            Update <i class="fa-solid fa-check"></i>
+                        </button>
+                    </span>
+            </div>
+        </div>
+
+    </div>
+    </form>
+</div>
+</body>
+</html>

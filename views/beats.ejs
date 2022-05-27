@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>beats</title>
+    <link rel="stylesheet" href="css/login.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body class="bg-1 d-flex flex-column min-vh-100" style="margin: 0px auto">
+<div>
+    <header>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/beats">Beats</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/beats">Beats</a>
+            <a class="py-2 text-dark text-decoration-none" href="/register">Register/LogIn</a>
+          </nav>
+    </header>
+    <section class="section">
+        <h2 class="header-1 mt-3 text-danger">Beats <i class="fa-solid fa-film"></i></h2>
+
+
+    
+        <div class="d-flex justify-content-center">
+            <a href="/admin/beats/add">
+                Add beat
+            </a>
+        </div>
+    
+        <% if(data.length){ %>
+            <div>
+                <% data.forEach(function(beat) { %>
+                        <div class="beat-title">
+                            <%= beat.title %>
+                        </div>
+                        <div class="beat-author">
+                            Author: <%= beat.author %>
+                        </div>
+                        <div class="beat-video">
+                            <iframe width="420" height="315"
+                src="<%= beat.music %>">
+                </iframe>
+                        </div>
+                    
+                        <form action="/beats/<%=beat.id%>/edit" method="get">
+                            <button class="btn btn-purple" >
+                                Edit
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </form>
+    
+                        <form action="/beats/<%=beat.id%>?_method=DELETE" method="post">
+                            <button class="btn btn-danger" type="submit">
+                                Delete
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
+                <% }); %>
+            </div>
+        <% }else{ %>
+            <div>
+                <div class="card bg-dark align-items-center rounded pb-3 border border-gray" style="max-width: 800px">
+                    <div class="text-light mt-3">
+                        <span>No beats found </span> <i class="fa-solid fa-compress"></i>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </section>
+    
+
+</div>
+</body>
+</html>

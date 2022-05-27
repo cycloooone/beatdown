@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beat</title>
+</head>
+<body class="bg-1 d-flex flex-column min-vh-100" style="margin: 0px auto">
+<div class="container-fluid pb-5">
+    <div class="d-flex justify-content-center row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div>
+            <div class="card bg-dark align-items-center rounded pb-3 border border-light">
+                <h1 class="header-1 mt-3">
+                    <%= data.title %>
+                </h1>
+
+                <div class="text-center">
+                    <span class="badge rounded-pill bg-light text-dark ms-1">
+                        <%= data.author %>
+                    </span>
+                </div>
+                
+
+            </div>
+
+            <div class="card bg-dark rounded align-items-center pb-3 mt-3 pt-3 border border-gray">
+                <a class="btn btn-warning" href="/beats/<%=data.id%>/edit">
+                    Edit <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <form action="/beats/<%=data.id%>?_method=DELETE" method="post">
+                    <button class="btn btn-danger">
+                        Delete <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

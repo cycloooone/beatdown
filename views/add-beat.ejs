@@ -1,0 +1,65 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/login.css">
+  </head>
+
+  <body class="text-center">
+    <div class="container py-2">
+      <div class="row d-flex justify-content-center align-items-center">
+          <div class="col col-xl-10">
+              <div class="card bg-black" style="border-radius: 1rem;">
+                  <div class="row g-0">
+                      <div class="d-flex align-items-center">
+                          <div class="card-body p-4 p-lg-5 text-black">
+                              <form action="/beats/" method="post">
+                                  <h1 class="fw-normal mb-3 pb-3 text-danger text-center">
+                                      New Beat <i class="fa-solid fa-clapperboard"></i>+
+                                  </h1>
+                                  
+                                  <div class="form-floating form-group mb-3">
+                                      <input type="text" name="title" class="form-control" id="actors" placeholder="Title" required>
+                                      <label for="actors"><i class="fa-solid fa-user-group"></i> Title</label>
+                                  </div>
+                                  <div class="form-floating form-group mb-3">
+                                      <input type="text" name="author" class="form-control" id="cover" placeholder="author" required>
+                                      <label for="cover"><i class="fa-solid fa-image"></i> Author</label>
+                                  </div>
+                                  <div class="form-floating form-group mb-3 ">
+                                      <input type="text" name="music" class="form-control" id="trailer" placeholder="Link" required>
+                                      <label for="trailer"><i class="fa-solid fa-caravan"></i> Link</label>
+                                  </div>
+                                  <button class="btn btn-lg btn-danger rounded-pill mb-4" type="submit">Add <i class="fa-solid fa-plus"></i></button>
+                              </form>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>
+
+

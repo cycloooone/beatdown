@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+
+</head>
+<body class="bg-1 d-flex flex-column min-vh-100" style="margin: 0px auto">
+<div>
+
+    <div class="profile-image-container">
+        
+        <div class="profile-photo-container">
+        </div>
+    </div>
+    <div class="profile-user-information">
+        <h1 class="profile-username">
+        </h1>
+
+    </div>
+    <h4 class="profile-user-information text-danger">
+        <%= data.email %>
+    </h4>
+    <div class="text-center">
+        <a class="btn btn-danger" style="font-size: 50px;" href="/users/<%=data.id%>/edit">
+            Edit
+            <i class="fa-solid fa-pen"></i>
+        </a>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
